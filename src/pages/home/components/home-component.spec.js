@@ -6,5 +6,6 @@ describe("home-component.vue", () => {
     const name = "test name";
     const wrapper = shallowMount(HomeComponent, { propsData: { name } });
     expect(wrapper.text()).toMatch(name);
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });
