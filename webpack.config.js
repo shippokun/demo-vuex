@@ -1,7 +1,7 @@
 module.exports = {
   entry: "./src/main.js",
   resolve: {
-    extensions: [".ts"]
+    extensions: [".ts"],
   },
   module: {
     rules: [
@@ -11,11 +11,11 @@ module.exports = {
           {
             loader: "ts-loader",
             options: {
-              transpileOnly: true // 型チェックしない！！！
-            }
-          }
-        ]
-      }
-    ]
-  }
+              transpileOnly: true, // 型チェックしない！！！
+            },
+          },
+        ],
+      },
+    ],
+  },
 };

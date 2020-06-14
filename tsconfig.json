@@ -13,7 +13,7 @@
     "paths": {
       "@/*": [
         // '@/account/register'のようにimportできるようにする
-        "src/javascripts/*"
+        "src/*"
       ]
     }
   },
