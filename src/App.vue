@@ -11,8 +11,8 @@ import { HomePage } from "./pages";
 export default {
   name: "app",
   components: {
-    HomePage
-  }
+    HomePage,
+  },
 };
 </script>
 
