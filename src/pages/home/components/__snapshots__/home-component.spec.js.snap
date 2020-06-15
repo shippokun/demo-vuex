@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`home-component.vue renders props.msg when passed 1`] = `
+exports[`home-component.vue renders props.name when passed 1`] = `
 <div class="home">
   <h1>test name</h1>
 </div>
