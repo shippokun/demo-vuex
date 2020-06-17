@@ -11,13 +11,10 @@ module.exports = {
   ],
   parser: "vue-eslint-parser",
   parserOptions: {
-    parser: {
-      "babel-eslint",
-      "@typescript-eslint/parser",
-    },
+    parser: ["babel-eslint", "@typescript-eslint/parser"],
     ecmaFeatures: {
-      "legacyDecotators": true
-    }
+      legacyDecotators: true,
+    },
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
@@ -25,11 +22,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)",
-        "**/*.spec.{j,t}s?(x)",
-      ],
+      files: ["**/*.spec.{j,t}s?(x)"],
       env: {
         jest: true,
       },
