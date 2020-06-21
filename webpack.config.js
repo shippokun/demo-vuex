@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./src/main.js",
+  entry: "./src/main.ts",
   resolve: {
     extensions: [".ts"],
   },
@@ -11,6 +11,8 @@ module.exports = {
           {
             loader: "ts-loader",
             options: {
+              // Vueをtypescriptとして扱う
+              appendTsSuffixTo: [/\.vue/],
               transpileOnly: true, // 型チェックしない！！！
             },
           },

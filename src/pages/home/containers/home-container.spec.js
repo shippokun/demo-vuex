@@ -1,6 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
-import HomeComponent from "../components/home-component.vue";
-import HomeContainer from "./home-container.vue";
+import HomeComponent from "../components";
+import HomeContainer from "./home-container";
 
 describe("home-container.vue", () => {
   it("should render successfully", () => {
