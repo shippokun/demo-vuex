@@ -4,14 +4,18 @@ module.exports = {
     node: true,
   },
   extends: [
-    "plugin:vue/essential",
     "eslint:recommended",
-    "@vue/prettier",
-    "@vue/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:jest/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
   ],
-  parser: "vue-eslint-parser",
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   parserOptions: {
-    parser: ["babel-eslint", "@typescript-eslint/parser"],
+    sourceType: "module",
+    project: "./tsconfig.json",
     ecmaFeatures: {
       legacyDecotators: true,
     },
@@ -26,6 +30,9 @@ module.exports = {
       env: {
         jest: true,
       },
+    },
+    {
+      files: ["*.ts", "*.tsx"],
     },
   ],
 };

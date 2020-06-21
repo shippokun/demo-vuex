@@ -1,22 +1,23 @@
 module.exports = {
-  entry: "./src/main.ts",
+  entry: path.resolve(__dirname, "./src/main.ts"),
   resolve: {
-    extensions: [".ts"],
+    extensions: [".ts", ".js", ".vue", ".json"],
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: [
-          {
-            loader: "ts-loader",
-            options: {
-              // Vueをtypescriptとして扱う
-              appendTsSuffixTo: [/\.vue/],
-              transpileOnly: true, // 型チェックしない！！！
-            },
-          },
-        ],
+        exclude: /node_modules/,
+        loader: "ts-loader",
+        options: {
+          // Vueをtypescriptとして扱う
+          appendTsSuffixTo: [/\.vue/],
+          transpileOnly: true, // 型チェックしない！！！
+        },
+      },
+      {
+        test: /\.vue$/,
+        use: "vue-loader",
       },
     ],
   },

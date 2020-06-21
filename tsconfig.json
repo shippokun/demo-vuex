@@ -11,18 +11,20 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true /* import Vue from 'vue';のような形式を有効にする */,
     "baseUrl": "./",
+    "types": ["webpack-env", "jest"],
     "paths": {
       "@/*": [
         // '@/account/register'のようにimportできるようにする
         "src/*"
       ]
-    }
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
-    "./src/**/*.ts",
-    "./src/**/*.tsx",
-    "./src/**/*.vue",
-    "src/store/index.spec.js"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/store/index.ts"
   ],
   "exclude": ["node_modules"]
 }
