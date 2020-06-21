@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    // "strict": true,
+    "noImplicitThis": true /* thisの型推論を有効にする */,
+    "sourceMap": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true /* import Vue from 'vue';のような形式を有効にする */,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        // '@/account/register'のようにimportできるようにする
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.vue",
+    "src/store/index.spec.js"
+  ],
+  "exclude": ["node_modules"]
+}

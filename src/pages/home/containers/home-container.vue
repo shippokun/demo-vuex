@@ -2,13 +2,14 @@
   <HomeComponent name="Shippokun" />
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
 import { HomeComponent } from "../components";
 
-export default {
-  name: "home-container",
+@Component({
   components: {
     HomeComponent
   }
-};
+})
+export class HomeContainer extends Vue {}
 </script>

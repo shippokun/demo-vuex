@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HomePage />
+    <HomeContainer />
   </div>
 </template>
 
-<script>
-// import HelloWorld from "./components/HelloWorld.vue";
-import { HomePage } from "./pages";
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import { HomeContainer } from "./pages";
 
-export default {
-  name: "app",
+@Component({
   components: {
-    HomePage
+    HomeContainer
   }
-};
+})
+export class App extends Vue {}
 </script>
 
 <style>
