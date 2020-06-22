@@ -1,3 +1,5 @@
+import path from "path";
+
 module.exports = {
   entry: path.resolve(__dirname, "./src/main.ts"),
   resolve: {

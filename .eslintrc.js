@@ -13,13 +13,6 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-  parserOptions: {
-    sourceType: "module",
-    project: "./tsconfig.json",
-    ecmaFeatures: {
-      legacyDecotators: true,
-    },
-  },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
