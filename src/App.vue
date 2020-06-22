@@ -11,8 +11,8 @@ import { HomeContainer } from "./pages";
 
 @Component({
   components: {
-    HomeContainer
-  }
+    HomeContainer,
+  },
 })
 export class App extends Vue {}
 </script>
